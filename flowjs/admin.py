@@ -1,5 +1,5 @@
 from django.contrib import admin
-from models import FlowFile, FlowFileChunk
+from .models import FlowFile, FlowFileChunk
 
 
 class FlowFileChunkInline(admin.TabularInline):
@@ -11,3 +11,4 @@ class FlowFileAdmin(admin.ModelAdmin):
     list_filter = ['state']
     inlines = [FlowFileChunkInline]
 admin.site.register(FlowFile, FlowFileAdmin)
+
